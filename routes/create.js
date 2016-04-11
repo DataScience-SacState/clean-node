@@ -1,18 +1,18 @@
 var express = require('express');
 var router = express.Router();
 
-var mysql      = require('mysql');
+var mysql = require('mysql');
 var connection = mysql.createConnection({
-  host     : '159.203.247.240',
-  user     : 'heroku',
-  password : 'dbpassword',
-  database : 'cleandb'
+    host: 'localhost',
+    user: 'root',
+    password: 'longasssqlpassword',
+    database: 'cleandb'
 });
 
 connection.connect();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
     console.log(req.query);
     var query = connection.query('INSERT INTO Event SET ?', req.query,
         function (err, rows) {
