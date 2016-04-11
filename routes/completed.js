@@ -1,5 +1,5 @@
-var datetime = require('node-datetime');
 var express = require('express');
+var datetime = require('node-datetime');
 var mysql = require('mysql');
 
 var router = express.Router();
