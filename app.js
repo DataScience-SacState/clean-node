@@ -9,6 +9,7 @@ var routes = require('./routes/index');
 var reports = require('./routes/reports');
 var create = require('./routes/create');
 var completed = require('./routes/completed');
+var clusters = require('./routes/clusters');
 
 var app = express();
 
@@ -54,6 +55,7 @@ app.use('/', routes);
 app.use('/reports.json', reports);
 app.use('/create', create);
 app.use('/completed', completed);
+app.use('/clusters.json', clusters);
 
 // Auth0 callback handler
 app.get('/callback',
