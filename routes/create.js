@@ -59,7 +59,7 @@ router.get('/', function (req, res, next) {
             }
             //next();
             console.log("WEWLAD");
-            res.send("K");
+            res.send(req.query);
             return;
         });
 });
